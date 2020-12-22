@@ -90,16 +90,3 @@ void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 	tmp->next = *new_node;
 	(*new_node)->prev = tmp;
 }
-
-/**
- * print_top1 - Prints all the values on the stack starting from the top.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
- */
-void print_top1(stack_t **stack, unsigned int line_number)
-{
-	if (stack == NULL || *stack == NULL)
-		error_check(6, line_number);
-	printf("%d\n", (*stack)->n);
-}
-
