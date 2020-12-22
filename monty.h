@@ -43,6 +43,7 @@ typedef struct instruction_s
 void push(stack_t **top, unsigned int element);
 void print_all(stack_t **top, unsigned int line_number);
 void print_top (stack_t **stack, unsigned int line_number);
+void print_top1(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void free_nodes(void);
 
