@@ -47,6 +47,7 @@ void print_top1(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void free_nodes(void);
 void swap_nodes(stack_t **, unsigned int);
+void add_opcode(stack_t **stack, unsigned int line_number);
 /*test*/
 
 void pop_top(stack_t **stack, unsigned int line_number);
@@ -55,7 +56,7 @@ void add_to_stack(stack_t **, unsigned int);
 stack_t *create_node(int n);
 void add_to_queue(stack_t **, unsigned int);
 void swap_nodes(stack_t **, unsigned int);
-void add_nodes(stack_t **stack, unsigned int line_number);
+void add_opcode(stack_t **stack, unsigned int line_number);
 void nop(stack_t **, unsigned int);
 
 /*endoftest*/
