@@ -99,7 +99,7 @@ void determine_func(char *opcode, char *value, int l_no, int specifier)
 	instruction_t f_list[] = {
 		{"pall", print_all},
 		{"push", add_to_stack},
-		{"pint", print_top1},
+		{"pint", print_top},
 		{"pop", pop},
 		{"swap", swap_nodes},
 		{"add", add_opcode},
