@@ -100,6 +100,7 @@ void determine_func(char *opcode, char *value, int l_no, int specifier)
 		{"pall", print_all},
 		{"push", add_to_stack},
 		{"pint", print_top1},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
