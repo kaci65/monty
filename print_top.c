@@ -7,12 +7,12 @@
  * @line_number: line to be evaluated
  * Return: nothing
  */
-void print_top (stack_t **stack, unsigned int line_number)
+void print_top(stack_t **stack, unsigned int line_number)
 {
-	if (*stack == NULL)
+	if (*stack == NULL || stac == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	else
 	{

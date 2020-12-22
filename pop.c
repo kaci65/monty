@@ -8,7 +8,7 @@
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	stack_t top_elem;
+	stack_t top_node;
 
 	if (!*stack)
 	{
@@ -16,7 +16,7 @@ void pop(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	top_node = *stack;
-	*stack = (*stack)-> next;
+	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
 	free(top_node);
 }
