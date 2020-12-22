@@ -8,9 +8,13 @@ stack_t *head = NULL;
  */
 int main(int argc, char **argv)
 {
-	if (argc < 2 || argc > 2)
-		error_check(1);
-	open_file(argv[1]);
-	free_nodes();
-	return (0);
+	char *file = argv[1];
+
+        if (argc != 2)
+        {
+                fprintf(stderr, "Usage: Monty file\n");
+                exit(EXIT_FAILURE);
+        }
+        file_func(file);
+        exit(EXIT_SUCCESS);
 }

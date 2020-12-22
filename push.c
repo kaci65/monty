@@ -30,5 +30,4 @@ void push(stack_t **top, unsigned int element)
 		new_top->prev = tmp;
 	}
 	*top = new_top;
-
 }
