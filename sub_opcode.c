@@ -9,8 +9,10 @@ void sub_opcode(stack_t **stack, unsigned int line_num)
 	int quotient;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_num);
-
+		exit(EXIT_FAILURE);
+	}
 	(*stack) = (*stack)->next;
 	quotient = (*stack)->n - (*stack)->prev->n;
 	(*stack)->n = quotient;
