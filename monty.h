@@ -57,6 +57,7 @@ stack_t *create_node(int n);
 void add_to_queue(stack_t **, unsigned int);
 void swap_nodes(stack_t **, unsigned int);
 void add_opcode(stack_t **stack, unsigned int line_number);
+void sub_opcode(stack_t **stack, unsigned int line_number);
 void nop(stack_t **, unsigned int);
 
 /*endoftest*/

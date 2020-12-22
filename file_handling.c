@@ -104,6 +104,7 @@ void determine_func(char *opcode, char *value, int l_no, int specifier)
 		{"swap", swap_nodes},
 		{"add", add_opcode},
 		{"nop", nop},
+		{"sub", sub_opcode},
 		{NULL, NULL}
 	};
 
