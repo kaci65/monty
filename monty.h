@@ -46,7 +46,7 @@ void print_top (stack_t **stack, unsigned int line_number);
 void print_top1(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void free_nodes(void);
-
+void swap_nodes(stack_t **, unsigned int);
 /*test*/
 
 void pop_top(stack_t **stack, unsigned int line_number);
