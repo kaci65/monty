@@ -107,9 +107,11 @@ void determine_func(char *opcode, char *value, int l_no, int specifier)
 		{"sub", sub_opcode},
 		{NULL, NULL}
 	};
-
+	/*comments implementation*/
 	if (opcode[0] == '#')
+	{
 		return;
+	}
 	/*Iterates through list to find the right function*/
 	for (flag = 1, i = 0; f_list[i].opcode != NULL; i++)
 	{
