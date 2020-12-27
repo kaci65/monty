@@ -17,7 +17,7 @@ void push(stack_t **top, unsigned int element)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	
+
 	new_top->prev = NULL;
 	new_top->n = element;
 
