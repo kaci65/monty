@@ -48,7 +48,7 @@ void pop(stack_t **stack, unsigned int line_number);
 int get_opfunc(char *str, stack_t **stack, unsigned int line_number);
 void file_func(char *filename);
 
-void free_nodes(void);
+void free_nodes(stack_t *head);
 stack_t *create_node(int n);
 void add_to_queue(stack_t **, unsigned int);
 void swap_nodes(stack_t **, unsigned int);
