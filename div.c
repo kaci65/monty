@@ -8,7 +8,7 @@
  */
 void div_op(stack_t **top, unsigned int line_number)
 {
-	stack_t *temp = NULL;
+	stack_t *temp = *top;
 	int stack_nodes = 0;
 
 	if (stack_nodes < 2)
@@ -16,7 +16,7 @@ void div_op(stack_t **top, unsigned int line_number)
 		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	if ((*top)->n)
+	if ((*top)->n == 0)
 	{
 		fprintf(stderr, "L%u: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
