@@ -11,7 +11,7 @@ void file_func(char *filename)
 	size_t buf_size = 0;
 	char *buf = NULL;
 	char *op_code;
-	stack_t *m_stack = NULL;
+	stack_t *stack = NULL;
 	unsigned int line_number = 0;
 	ssize_t line_count;
 
@@ -32,10 +32,10 @@ void file_func(char *filename)
 		}
 		else
 		{
-			get_opfunc(op_code, &m_stack, line_number);
+			get_opfunc(op_code, &stack, line_number);
 		}
 	}
 	fclose(file_pointer);
 	free(buf);
-	free_nodes(m_stack);
+	free_nodes(stack);
 }
