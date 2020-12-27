@@ -27,7 +27,8 @@ int get_opfunc(char *str, stack_t **stack, unsigned int line_number)
 	{
 		if (strcmp(str, op_funcs[index].opcode) == 0)
 		{
-			(op_funcs[index].f);
+			(op_funcs[index].f)(stack, line_number);
+			return (EXIT_SUCCESS);
 		}
 		index++;
 	}
