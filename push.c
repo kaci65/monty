@@ -8,26 +8,24 @@
  */
 void push(stack_t **top, unsigned int element)
 {
-	stack_t *new_top, *tmp;
+	stack_t *new_top;
 
-	tmp = *top;
-	new_top = malloc(sizeof(stack_t));
+	new_top = create_node(element);
 
 	if (new_top == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	new_top->n = element;
-	new_top->prev = NULL;
-	new_top->next = NULL;
 
 	if (*top)
 	{
 		new_top->next = *top;
 		new_top->prev = NULL;
-		tmp->next = new_top;
-		new_top->prev = tmp;
+		if (!(*top))
+		{
+			(*top)->prev = new_top;
+		}
 	}
 	*top = new_top;
 }
