@@ -8,7 +8,7 @@
  */
 void div_op(stack_t **top, unsigned int line_number)
 {
-	stack_t *temp;
+	stack_t *temp = *top;
 
 	if (!(*top) || !((*top)->next))
 	{
@@ -21,8 +21,6 @@ void div_op(stack_t **top, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	(*top)->next->n /= (*top)->n;
-	(*top) = (*top)->next;
-	temp = *top;
 	(*top)->prev = NULL;
 	free(temp);
 }
