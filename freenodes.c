@@ -2,7 +2,7 @@
 /**
  * free_nodes - Free a node in the stack.
  */
-void free_nodes(void)
+void free_nodes(stack_t *head)
 {
 	stack_t *tmp;
 
