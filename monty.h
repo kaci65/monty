@@ -45,6 +45,8 @@ void push(stack_t **stack, unsigned int element);
 void print_all(stack_t **top, unsigned int line_number);
 void print_top(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void div_op(stack_t **top, unsigned int line_number);
+void mul(stack_t **top, unsigned int line_number);
 
 void free_nodes(void);
 stack_t *create_node(int n);
