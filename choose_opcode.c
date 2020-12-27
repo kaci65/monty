@@ -32,10 +32,8 @@ int get_opfunc(char *str, stack_t **stack, unsigned int line_number)
 		}
 		index++;
 	}
-	if (op_funcs[index].opcode == NULL)
-	{
-		fprintf(stderr, "L%u: unknown instruction %s\n", line_number, str);
-		exit(EXIT_FAILURE);
-	}
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, str);
+	exit(EXIT_FAILURE);
+
 	return (0);
 }
