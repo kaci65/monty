@@ -9,9 +9,8 @@
 void div_op(stack_t **top, unsigned int line_number)
 {
 	stack_t *temp = *top;
-	int stack_nodes = 0;
 
-	if (stack_nodes < 2)
+	if (!(*top) || !top)
 	{
 		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
@@ -24,6 +23,5 @@ void div_op(stack_t **top, unsigned int line_number)
 	temp->next->n /= temp->n;
 	temp = (*top)->next;
 	temp->prev = NULL;
-	(*top) = temp;
 	free(temp);
 }
