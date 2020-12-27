@@ -20,7 +20,8 @@ void div_op(stack_t **top, unsigned int line_number)
 		fprintf(stderr, "L%u: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	(*top)->next->n /= (*top)->n;
+	temp = (*top)->next;
+	temp->n /= (*top)->n;
 	(*top)->prev = NULL;
 	free(temp);
 }
