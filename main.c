@@ -9,11 +9,11 @@ int main(int argc, char **argv)
 {
 	char *file = argv[1];
 
-        if (argc != 2)
-        {
-                fprintf(stderr, "Usage: Monty file\n");
-                exit(EXIT_FAILURE);
-        }
-        file_func(file);
-        exit(EXIT_SUCCESS);
+	if (argc != 2)
+	{
+		fprintf(stderr, "Usage: Monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	file_func(file);
+	exit(EXIT_SUCCESS);
 }
