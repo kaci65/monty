@@ -1,4 +1,5 @@
 #include "monty.h"
+stack_t *head = NULL;
 /**
  * main - Program entry point.
  * @argc: Number of command line arguments.
@@ -7,13 +8,9 @@
  */
 int main(int argc, char **argv)
 {
-	char *file = argv[1];
-
-	if (argc != 2)
-	{
-		fprintf(stderr, "Usage: Monty file\n");
-		exit(EXIT_FAILURE);
-	}
-	file_func(file);
-	exit(EXIT_SUCCESS);
+	if (argc < 2 || argc > 2)
+		error_check(1);
+	open_file(argv[1]);
+	free_nodes();
+	return (0);
 }
