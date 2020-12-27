@@ -1,9 +1,5 @@
 #include "monty.h"
 
-
-
-
-
 /**
  * create_node - Creates and populates a node.
  * @n: Number to go inside the node.
