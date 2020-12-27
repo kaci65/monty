@@ -8,15 +8,15 @@
  */
 void mul(stack_t **top, unsigned int line_number)
 {
-	stack_t *temp = *top;
+	int top_node, res;
 
 	if (!(*top) || !((*top)->next))
 	{
 		fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	temp = (*top)->next;
-	temp->n *= (*top)->n;
+	top_node = (*top)->n;
+	res = top_node * ((*top)->next->n);
 	pop(top, line_number);
-
+	(*top)->n = res;
 }
