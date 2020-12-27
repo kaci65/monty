@@ -22,6 +22,5 @@ void div_op(stack_t **top, unsigned int line_number)
 	}
 	temp = (*top)->next;
 	temp->n /= (*top)->n;
-	(*top)->prev = NULL;
-	free(temp);
+	pop(top, line_number);
 }
